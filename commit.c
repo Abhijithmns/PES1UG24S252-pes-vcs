@@ -122,6 +122,7 @@ int commit_walk(commit_walk_fn callback, void *ctx) {
         id = c.parent;
     }
     return 0;
+
 }
 
 // Read the current HEAD commit hash.
