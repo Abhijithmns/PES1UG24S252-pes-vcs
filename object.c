@@ -223,7 +223,7 @@ int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_
     // 4. Integrity check — recompute hash and compare
     ObjectID computed;
     compute_hash(buf, (size_t)file_size, &computed);
-    if (memcmp(computed.hash, id->hash, HASH_SIZE) != 0) {
+    if (memcmp(computed.hash, id->hash, HASH_SIZE ) != 0) {
         free(buf); return -1;
     }
 
