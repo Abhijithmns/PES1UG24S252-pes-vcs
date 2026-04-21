@@ -15,7 +15,6 @@
 // TODO functions:     commit_create
 
 #include "commit.h"
-#include "index.h"
 #include "tree.h"
 #include <stdio.h>
 #include <stdlib.h>
