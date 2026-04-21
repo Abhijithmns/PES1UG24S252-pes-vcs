@@ -183,7 +183,6 @@ static int write_tree_level(IndexEntry *entries, int count,
             te->mode = MODE_DIR;
             memcpy(te->name, dir_name, dir_len + 1);   // +1 for '\0'
             te->hash = sub_id;
-
             i = j;
         }
     }
