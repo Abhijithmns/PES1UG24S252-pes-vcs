@@ -237,6 +237,7 @@ int index_save(const Index *index) {
 //
 int index_add(Index *index, const char *path) {
     // ── 1. Read file contents ────────────────────────────────────────────────
+//
     FILE *f = fopen(path, "rb");
     if (!f) { perror(path); return -1; }
 
