@@ -153,6 +153,7 @@ static int write_tree_level(IndexEntry *entries, int count,
             te->name[sizeof(te->name) - 1] = '\0';
             te->hash = entries[i].hash;
             i++;
+
         } else {
             // ── Subdirectory: collect the full contiguous run ───────────────
             size_t dir_len = (size_t)(slash - rel);
