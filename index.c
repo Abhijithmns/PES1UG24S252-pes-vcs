@@ -251,7 +251,9 @@ int index_add(Index *index, const char *path) {
     if (fread(buf, 1, (size_t)file_size, f) != (size_t)file_size) {
         free(buf); fclose(f); return -1;
     }
+
     fclose(f);
+
 
     // ── 2. Store as a blob object ────────────────────────────────────────────
     ObjectID blob_id;
