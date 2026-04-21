@@ -238,7 +238,9 @@ int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_
 
     // 6. Copy data portion into a fresh allocation for the caller
     void *data_copy = malloc(data_len);
-    if (!data_copy) { free(buf); return -1; }
+    if (!data_copy) { 
+        free(buf); return -1; 
+    }
     memcpy(data_copy, buf + header_len, data_len);
 
     free(buf);
