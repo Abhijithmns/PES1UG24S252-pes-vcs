@@ -101,6 +101,7 @@ int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out
                          : NULL;
     if (!type_str) return -1;
 
+
     char header[64];
     int header_len = snprintf(header, sizeof(header), "%s %zu", type_str, len) + 1; // +1 for '\0'
 
